@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="/appone/uni/" method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" name="button">save uni</button>
+    </form><br>
+    <form class="" action="/appone/col/" method="POST">
+      {% csrf_token %}
+      {{form1.as_p}}
+      <button type="submit" name="button">save college</button>
+    </form><br>
+    <form class="" action="/appone/showcolg/" method="POST">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" name="button">Search college</button>
+    </form><br>
+    <form class="" action="/appone/showuni/" method="POST">
+      {% csrf_token %}
+      Cname: <input type="text" name="cname" value=""><br><br>
+      <button type="submit" name="button">Search uni</button>
+    </form><br>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/style1.css"%}">
+    <title></title>
+  </head>
+  <body><h1>DOG INFORMATION</h1>
+    {% if dog %}
+    <table>
+      <thead>
+          <th>name</th>
+          <th>life</th>
+          <th>cost</th>
+      </thead>
+      {% for x in data %}
+      <tr>
+        <td>{{x.name}}</td>
+        <td>{{x.life}}</td>
+        <td>{{x.cost}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <h1>{{data}}</h1>
+    {% endif %}
+  </body>
+</html>

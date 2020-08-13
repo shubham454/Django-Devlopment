@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <link rel="stylesheet" href="{% static 'css/style.css' %}">-->
+    <title>list</title>
+    <h1>list of all bank account</h1>
+</head>
+<body>
+  {% load cust_filters %}
+<table border="2px">
+    <thead>
+    <th>account no</th>
+    <th>name</th>
+    <th>address</th>
+    <th>delete</th>
+    <th>update</th>
+    </thead>
+    {% for acc in bankaccount %}
+    <tr>
+        <td>{{acc.ano}}</td>
+        <td>{{acc.name|upper}}</td>
+        <td>{{acc.add|f2upper}}</td>
+        <td>
+            <form action="/{{acc.ano}}/" method="get">
+                <button type="submit">delete</button>
+            </form>
+        </td>
+        <td><form action="/update/{{acc.ano}}/" method="get">
+            <button type="submit">update</button>
+        </form>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

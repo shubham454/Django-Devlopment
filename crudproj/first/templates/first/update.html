@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>book data update</title>
+    <style media="screen">
+    h1{
+      background-color: pink;
+      text-align: center;
+    }
+    body{
+      background-color: powderblue;
+    }
+    table{
+      height: 200px;
+      width: 500px;
+      margin-left: 30%;
+    }
+    table,tr,td,th{
+      border: 3px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+  </head>
+  <body>
+      <h1>update </h1>
+    <form class="" action="/first/update/{{obj.id}}/" method="POST">
+
+      {{form.as_p}}
+      <button type="submit" name="button">update</button>
+    </form><br>
+  </html>

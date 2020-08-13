@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>success pages</h1>
+    {{emp.img.url}}
+    image should be here
+    <form action="/img/" enctype="multipart/form-data" method="post">
+      {% csrf_token %}
+      <label for="img">Select image:</label>
+      <input type="file" id="img" name="img" accept="image/*">
+      <input type="submit">
+    </form>
+  </body>
+</html>

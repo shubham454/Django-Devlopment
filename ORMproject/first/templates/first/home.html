@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/style1.css"%}">
+    <title></title>
+  </head>
+  <body><h1>STUDENT INFORMATION</h1>
+    <table>
+      <thead>
+          <th>name</th>
+          <th>rollno</th>
+          <th>marks</th>
+      </thead>
+      {% for x in data %}
+      <tr>
+        <td>{{x.name}}</td>
+        <td>{{x.rollno}}</td>
+        <td>{{x.marks}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

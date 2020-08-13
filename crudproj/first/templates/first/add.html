@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>employee data</title>
+    <style media="screen">
+    h1{
+      background-color: pink;
+      text-align: center;
+    }
+    body{
+      background-color: powderblue;
+    }
+    table{
+      height: 200px;
+      width: 500px;
+      margin-left: 30%;
+    }
+    table,tr,td,th{
+      border: 3px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>ADD EMPLOYEE HERE</h1>
+    <form class="" action="/first/add/" method="POST">
+      {% csrf_token %}
+      Name: <input type="text" name="ename" value=""><br><br>
+      Salary: <input type="text" name="esalary" value=""><br><br>
+      Company: <input type="text" name="ecompany" value=""><br><br>
+      <button type="submit" name="button">save</button>
+    </form><br>
+    <form class="" action="/first/all/" method="GET">
+      <button type="submit" name="button">TABLE</button>
+    </form>
+  </body>
+  </html>

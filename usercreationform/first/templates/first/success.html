@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>User logged in successfully</h1>
+    <form class="" action="/logout/" method = "POST">
+      {% csrf_token %}
+      <button type="submit" name="button">logout</button>
+    </form>
+    {%for x in obj %}
+    <img src="{{x.image.url}}" alt="">
+    <h1>{{x.imgname}}</h1>
+    {%endfor%}
+  </body>
+</html>

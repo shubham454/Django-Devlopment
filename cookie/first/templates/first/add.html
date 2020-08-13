@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>add item here</h1>
+    <form action="/add/" method="post">
+      {%csrf_token%}
+      {{form.as_p}}
+      <button type="submit" name="button">add item</button>
+    </form>
+    <a href="/display">dispaly item</a>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{% extends 'testapp/base.html'%}
+{% block body %}
+<div class = 'container' align = 'center'>
+  <h1>Here is the beer information</h1>
+</div><hr>
+<h3>Beer name:{{beer.name|upper}}</h3>
+<h3>Beer name:{{beer.color}}</h3>
+<h3>Beer name:{{beer.teast}}</h3>
+<h3>Beer name:{{beer.price}} only</h3><hr><br><br>
+<div class="container" align = 'center'>
+  <a href="/list" class = 'btn btn-lg btn-success'>all beer</a>
+</div>
+{% endblock %}

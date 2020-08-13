@@ -1,0 +1,19 @@
+{% extends 'testapp/base.html'%}
+{% block body %}
+<div class="container" align = 'center'>
+  <h1>Beer available as follows </h1>
+</div><hr>
+<table border="2px">
+  {% for beer in beer_list %}
+  <tr>
+    <td><a href="/{{beer.id}}/"><h3>{{beer.name|upper}}</h3></a></td>
+    <td><a href="/update/{{beer.id}}/" class='btn btn-lg btn-success'>update</a></td>
+    <td><a href="/delete/{{beer.id}}/" class='btn btn-lg btn-danger'>delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+    <hr>
+    <div class="container" align = 'center'>
+      <a href="/create/" class = 'btn btn-lg btn-primary'>add new beer</a>
+    </div>
+{% endblock %}

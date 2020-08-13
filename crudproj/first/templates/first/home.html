@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>employee data</title>
+    <style media="screen">
+    h1{
+      background-color: pink;
+      text-align: center;
+    }
+
+    body{
+      background-color: powderblue;
+    }
+    table{
+      height: 200px;
+      width: 500px;
+      margin-left: 30%;
+    }
+
+    table,tr,td,th{
+      border: 3px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+  </head>
+  <body>
+    <h1> EMPLOYEE IN CJC</h1>
+    <table>
+      <thead>
+        <th>name</th>
+        <th>salary</th>
+        <th>company</th>
+        <th><button type="button" name="button">DELETE</button></th>
+        <th><button type="button" name="button">UPDATE</button>
+</th>
+      </thead>
+      {% for x in data %}
+      <tr>
+        <td>{{x.ename}}</td>
+        <td>{{x.esalary}}</td>
+        <td>{{x.ecompany}}</td>
+        <form class="" action="/first/delete/{{x.id}}/" method="post">
+          {% csrf_token %}
+          <td><button type="submit" name="delete">DELETE</button></td>
+        </form>
+        <form class="" action="/first/update/{{x.id}}/" method="get">
+          
+          <td><button type="submit" name="update">UPDATE</button></td>
+        </form>
+      </tr>
+      {% endfor %}
+    </table>
+    <form class="" action="/first/add/" method="GET">
+      <button type="submit" name="button" style="position: absolute; right: 670px; margin-top: 20px;" > ADD EMPLOYEE </button>
+    </form>
+  </body>
+  </html>

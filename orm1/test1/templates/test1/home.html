@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/style1.css"%}">
+    <title></title>
+  </head>
+  <body><h1>EMPLOYEE INFORMATION</h1>
+    <table>
+      <thead>
+          <th>name</th>
+          <th>salary</th>
+          <th>company</th>
+          <th>shift</th>
+      </thead>
+      {% for x in data %}
+      <tr>
+        <td>{{x.name}}</td>
+        <td>{{x.salary}}</td>
+        <td>{{x.company}}</td>
+        <td>{{x.shift}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
